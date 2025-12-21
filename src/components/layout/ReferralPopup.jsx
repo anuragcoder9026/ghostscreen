@@ -54,25 +54,36 @@ const ReferralPopup = () => {
   return (
     <>
       {/* Floating Popup */}
-      <div className="fixed bottom-4 right-4 bg-blue-600/80 text-white px-4 py-3 rounded-xl shadow-lg backdrop-blur-md max-w-xs animate-slide-up z-[9999]">
+      <div className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-xl shadow-purple-600/20 backdrop-blur-md max-w-sm animate-slide-up z-[9999]">
 
+        {/* Close button */}
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-1 right-1 text-white/80 hover:text-white transition"
+          className="absolute top-3 right-3 text-white/70 hover:text-white hover:bg-white/20 rounded-full p-1.5 transition-all"
         >
-          <X size={16} />
+          <X size={18} />
         </button>
 
-        <p className="font-semibold text-sm">🎁 Refer a friend & earn coins!</p>
-        <p className="text-white/90 text-xs mt-1">
-          Both Referrer and Referred user must have college email or you should have a paid plan to get coins on referring.
+        {/* Icon and Header */}
+        <div className="flex items-start gap-3 mb-3">
+          <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-lg">
+            <Heart className="w-6 h-6 text-white" fill="currentColor" />
+          </div>
+          <div>
+            <p className="font-bold text-lg leading-tight">Refer & Earn Coins!</p>
+            <p className="text-white/90 text-sm mt-1">Share the love, get rewarded</p>
+          </div>
+        </div>
+
+        <p className="text-white/85 text-xs leading-relaxed mb-4 bg-white/10 backdrop-blur-sm p-3 rounded-lg">
+          Both you and your friend must have a college email or a paid plan to earn coins.
         </p>
 
         <button
           onClick={() => setModalOpen(true)}
-          className="mt-3 w-full bg-white text-blue-700 font-semibold text-xs py-1 rounded-lg hover:bg-white/90 transition cursor-pointer"
+          className="w-full bg-white text-blue-600 font-bold text-sm py-3 rounded-lg hover:bg-white/95 transition-all duration-300 shadow-lg transform hover:-translate-y-0.5 cursor-pointer"
         >
-          Refer Now
+          🎁 Start Referring
         </button>
       </div>
 
