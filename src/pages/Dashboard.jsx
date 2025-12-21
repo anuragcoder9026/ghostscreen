@@ -39,6 +39,7 @@ const Dashboard = ({ handleQuickAction }) => {
     // Restore missing state and hooks
     const [copied, setCopied] = useState(false);
     const [referralCopied, setReferralCopied] = useState(false);
+    const [generating, setGenerating] = useState(false);
     const { timeCoins, user } = useAuth();
 
     const handleCopy = (text) => {
@@ -76,6 +77,7 @@ const Dashboard = ({ handleQuickAction }) => {
         e.preventDefault();
         const minutes = parseInt(interviewTime, 10);
         if (!isNaN(minutes) && minutes > 0) {
+            setGenerating(true);
             try {
                 // Call backend to generate token
                 const response = await axios.post(
@@ -103,6 +105,8 @@ const Dashboard = ({ handleQuickAction }) => {
                 console.error("Error generating token:", error);
                 toast.error(error.response.data.message || "Failed to generate token");
                 // Handle error appropriately (e.g., show toast)
+            } finally {
+                setGenerating(false);
             }
         }
     };
@@ -239,9 +243,15 @@ const Dashboard = ({ handleQuickAction }) => {
                                         </button>
                                         <button
                                             type="submit"
-                                            className="px-6 py-2.5 cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                                            disabled={generating}
+                                            className="px-6 py-2.5 cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
-                                            Generate
+                                            {generating ? (
+                                                <div className="flex items-center justify-center gap-2">
+                                                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                                    <span>Generating...</span>
+                                                </div>
+                                            ) : 'Generate'}
                                         </button>
                                     </div>
                                 </form>
