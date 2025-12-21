@@ -258,9 +258,9 @@ const Dashboard = ({ handleQuickAction }) => {
                             </div>
                         </div>
                     )}
-                    <div className="flex justify-end gap-3">
+                    {/* <div className="flex justify-end gap-3">
                         <button onClick={verifyUser} className="px-6 py-2.5 cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-blue-500/25">Verify</button>
-                    </div>
+                    </div> */}
                     {/* Referral Card */}
                     <div className="bg-gradient-to-br from-green-500/20 to-teal-600/20 p-6 rounded-none border border-green-500/30 shadow-lg">
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><Users size={20} /> Refer & Earn</h3>

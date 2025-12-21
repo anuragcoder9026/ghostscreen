@@ -3,7 +3,7 @@ import { X, Mail, Heart, Copy, Check, Linkedin, } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { toast } from "react-toastify";
-
+import { FRONTEND_URL } from "../../config/api";
 import { useAuth } from "../../contexts/AuthContext";
 
 const ReferralPopup = () => {
@@ -13,8 +13,8 @@ const ReferralPopup = () => {
   const { user } = useAuth();
 
   const invitationLink = user?.referralCode
-    ? `${process.env.FRONTEND_URL}/signup?refer_code=${user.referralCode}`
-    : `${process.env.FRONTEND_URL}/signup`;
+    ? `${FRONTEND_URL}/signup?refer_code=${user.referralCode}`
+    : `${FRONTEND_URL}/signup`;
 
   const handleCopy = (text, setStateFn) => {
     navigator.clipboard.writeText(text);
