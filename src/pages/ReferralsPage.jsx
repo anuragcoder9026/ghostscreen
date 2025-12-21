@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Copy, Mail, Send, Check } from 'lucide-react';
+import { Share2, Mail, CheckCircle, Copy, Gift } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
+import API_URL from '../config/api';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import axios from 'axios';
@@ -29,7 +30,7 @@ const ReferralsPage = ({ embedded = false }) => {
         setSending(true);
         try {
             const response = await axios.post(
-                'http://localhost:8000/api/users/send-referral-invite',
+                `${API_URL}/api/users/send-referral-invite`,
                 { email },
                 {
                     withCredentials: true,

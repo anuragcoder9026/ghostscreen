@@ -3,6 +3,7 @@ import { User, Shield, CreditCard, Bell, Save, Upload, Lock, LogOut, ExternalLin
 import { useAuth } from '../contexts/AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import API_URL from '../config/api';
 
 // Reusable component for TOP TAB navigation items
 const TabNavItem = ({ icon, label, isActive, onClick }) => (
@@ -127,7 +128,7 @@ const ProfileSettings = () => {
             formData.append('profilePicture', file);
 
             const response = await axios.post(
-                'http://localhost:8000/api/users/upload-profile-picture',
+                `${API_URL}/api/users/upload-profile-picture`,
                 formData,
                 {
                     withCredentials: true,
@@ -170,7 +171,7 @@ const ProfileSettings = () => {
         setSaving(true);
         try {
             const response = await axios.put(
-                'http://localhost:8000/api/users/update-profile',
+                `${API_URL}/api/users/update-profile`,
                 { name: name.trim(), username: username.trim() },
                 {
                     withCredentials: true,
@@ -321,7 +322,7 @@ const SecuritySettings = () => {
         setUpdating(true);
         try {
             const response = await axios.put(
-                'http://localhost:8000/api/users/change-password',
+                `${API_URL}/api/users/change-password`,
                 {
                     currentPassword: hasPassword ? passwords.currentPassword : null,
                     newPassword: passwords.newPassword
@@ -448,7 +449,7 @@ const SecuritySettings = () => {
                     onClick={async () => {
                         try {
                             const response = await axios.put(
-                                'http://localhost:8000/api/users/toggle-extra-security',
+                                `${API_URL}/api/users/toggle-extra-security`,
                                 {},
                                 {
                                     withCredentials: true,
@@ -549,7 +550,7 @@ const NotificationSettings = () => {
 
         try {
             const response = await axios.put(
-                'http://localhost:8000/api/users/update-notifications',
+                `${API_URL}/api/users/update-notifications`,
                 { notifications: newNotifications },
                 {
                     withCredentials: true,

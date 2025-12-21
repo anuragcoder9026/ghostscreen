@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import axios from 'axios';
+import API_URL from '../config/api';
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
@@ -17,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     const fetchProfile = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:8000/api/users/profile", {
+        const res = await axios.get(`${API_URL}/api/users/profile`, {
           withCredentials: true, // ✅ send cookies automatically
         });
         setUser(res.data.user);
@@ -39,7 +40,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await fetch("http://localhost:8000/api/users/logout", {
+    await fetch(`${API_URL}/api/users/logout`, {
       method: "POST",
       credentials: "include", // required for cookies
     });

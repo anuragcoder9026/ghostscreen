@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import API_URL from '../config/api';
 // Reusable component for statistic cards
 const StatCard = ({ icon, label, value, colorClass }) => (
     <div className="bg-white dark:bg-gray-800/50 p-5 rounded-none border border-gray-200 dark:border-gray-700/50 shadow-lg dark:shadow-none">
@@ -78,7 +79,7 @@ const Dashboard = ({ handleQuickAction }) => {
             try {
                 // Call backend to generate token
                 const response = await axios.post(
-                    "http://localhost:8000/api/desktop/generate-token",
+                    `${API_URL}/api/desktop/generate-token`,
                     {
                         type: coinUsageType,
                         duration: minutes * 60
@@ -109,7 +110,7 @@ const Dashboard = ({ handleQuickAction }) => {
     const verifyUser = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/desktop/get-token-info",
+                `${API_URL}/api/desktop/get-token-info`,
                 { token: generatedToken },
                 {
                     withCredentials: true, // 👈 if you’re handling cookies in backend
@@ -162,6 +163,15 @@ const Dashboard = ({ handleQuickAction }) => {
                                     className="px-6 py-2.5 cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-0.5"
                                 >
                                     Generate
+                                </button>
+                            )}
+
+                            {isTimerActive && (
+                                <button
+                                    onClick={handleStartClick}
+                                    className="px-6 py-2.5 cursor-pointer bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-500 hover:to-teal-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:-translate-y-0.5"
+                                >
+                                    Regenerate
                                 </button>
                             )}
                         </div>

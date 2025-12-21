@@ -15,12 +15,16 @@ const Header = () => {
         { name: 'Features', id: 'features' },
         { name: 'How It Works', id: 'how-it-works' },
         { name: 'Pricing', id: 'pricing' },
-        { name: 'Feedback', id: 'user-feedback' },
+        { name: 'Blog', path: '/blog' },
     ];
 
-    const handleNavLinkClick = (id) => {
+    const handleNavLinkClick = (link) => {
         setIsMobileMenuOpen(false);
-        navigate(`/#${id}`);
+        if (link.path) {
+            navigate(link.path);
+        } else if (link.id) {
+            navigate(`/#${link.id}`);
+        }
     };
 
     return (
@@ -32,7 +36,7 @@ const Header = () => {
                 </button>
                 <nav className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (
-                        <button key={link.id} onClick={() => handleNavLinkClick(link.id)} className="cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium text-sm lg:text-base">
+                        <button key={link.name} onClick={() => handleNavLinkClick(link)} className="cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 font-medium text-sm lg:text-base">
                             {link.name}
                         </button>
                     ))}
@@ -90,7 +94,7 @@ const Header = () => {
                 <div className="md:hidden bg-white/95 dark:bg-gray-700/95 backdrop-blur-md absolute top-full left-0 w-full shadow-lg border-t border-gray-200 dark:border-gray-600 transition-colors duration-300">
                     <nav className="flex flex-col items-center space-y-4 py-6">
                         {navLinks.map((link) => (
-                            <button key={link.id} onClick={() => handleNavLinkClick(link.id)} className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 text-lg font-medium">{link.name}</button>
+                            <button key={link.name} onClick={() => handleNavLinkClick(link)} className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 text-lg font-medium">{link.name}</button>
                         ))}
                         <div className="flex flex-col items-center space-y-4 pt-4 w-full px-8">
                             {isLoggedIn ? (

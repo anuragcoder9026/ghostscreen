@@ -10,7 +10,7 @@ const PricingCard = ({ coins, price, bonus, isPopular }) => {
                 <h3 className="text-2xl font-semibold mb-2 mt-4 text-gray-900 dark:text-white">{coins} Time Coins</h3>
                 {bonus && <p className="text-green-500 dark:text-green-400 font-semibold">{bonus}</p>}
             </div>
-            <p className="text-center text-5xl font-bold my-4 text-gray-900 dark:text-white">₹{price}</p>
+            <p className="text-center text-5xl font-bold my-4 text-gray-900 dark:text-white">${price}</p>
             <p className="text-center text-gray-600 dark:text-gray-400 mb-6">1 Coin = 1 minute of Stealth Time</p>
             <button onClick={() => navigate('/purchase')} className={`w-full mt-auto py-3 rounded-lg font-semibold transition-all duration-300 ${isPopular ? 'bg-purple-600 hover:bg-purple-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white'}`}>Purchase Now</button>
         </div>
@@ -19,9 +19,9 @@ const PricingCard = ({ coins, price, bonus, isPopular }) => {
 
 const Pricing = ({ embedded = false }) => {
     const pricingData = [
-        { coins: 100, price: "100" },
-        { coins: 1000, price: "1000", bonus: "+300 Bonus Coins!", isPopular: true },
-        { coins: 500, price: "500", bonus: "+100 Bonus Coins!", },
+        { coins: 100, price: "1" },
+        { coins: 1000, price: "10", bonus: "+300 Bonus Coins!", isPopular: true },
+        { coins: 500, price: "5", bonus: "+100 Bonus Coins!", },
     ];
 
     if (embedded) {

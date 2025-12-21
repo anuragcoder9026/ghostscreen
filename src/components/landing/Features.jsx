@@ -6,12 +6,12 @@ const Features = () => {
     const [isVideoVisible, setIsVideoVisible] = useState(false);
 
     const featuresData = [
-        { icon: <EyeOff size={28} />, title: "Universal Invisibility", description: "Works seamlessly with Zoom, Microsoft Teams, Google Meet, Discord, and most other screen sharing platforms." },
-        { icon: <AppWindow size={28} />, title: "Selective Hiding", description: "You're in control. Choose exactly which applications or windows you want to make invisible to others." },
-        { icon: <ToggleRight size={28} />, title: "Instant Toggle", description: "Effortlessly hide and reveal your chosen apps with a single, customizable hotkey. Privacy at your fingertips." },
-        { icon: <KeyRound size={28} />, title: "Secure Token Login", description: "No need to remember another password. Use your single, unique token for secure access to the desktop app." },
-        { icon: <Clock size={28} />, title: "Time Coin System", description: "Enjoy a flexible, pay-as-you-go model. Your Time Coins are only consumed when the stealth mode is active." },
-        { icon: <Feather size={28} />, title: "Low Resource Usage", description: "GhostScreen runs silently and efficiently in the background, ensuring no impact on your system's performance." },
+        { icon: <EyeOff size={28} />, title: "Universal Invisibility", description: "Works seamlessly with Hacker Rank,Discord, Microsoft Teams,Google Meet, Zoom, and most other screen sharing platforms.", highlight: ["Hacker Rank", "Microsoft Teams", "Zoom",] },
+        { icon: <AppWindow size={28} />, title: "Performance & Speed", description: "Engineered for speed with an ultra-low latency response time averaging just 200ms.", highlight: ["200ms"] },
+        { icon: <ToggleRight size={28} />, title: "Multi-Model Intelligence", description: "Powered by Gemini 3,Gpt-OSS-120b and LLama-3.3 capable of understanding complex code, logic puzzles, and long-context documents.", highlight: ["Gemini 3", "Gpt-OSS-120b", "LLama-3.3"] },
+        { icon: <KeyRound size={28} />, title: "Ghost Mode", description: "A fully transparent, click-through overlay that lets you read AI answers while continuing to type in your code editor underneath.", highlight: ["transparent", "overlay"] },
+        { icon: <Clock size={28} />, title: "Vision Auto-Fix", description: "Advanced OCR technology that reads code directly from your screen, even if it's an image or video, with high accuracy.", highlight: ["OCR", "high accuracy"] },
+        { icon: <Feather size={28} />, title: "Low Resource Usage", description: "GhostScreen runs silently and efficiently in the background, ensuring no impact on your system's performance.", highlight: ["silently", "efficiently"] },
     ];
 
     const handlePlayClick = () => {

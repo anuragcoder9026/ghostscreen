@@ -8,6 +8,7 @@ import HowItWorks from '../components/landing/HowItWorks';
 import Pricing from '../components/landing/Pricing';
 import UserFeedback from '../components/landing/UserFeedback';
 import DownloadCTA from '../components/landing/DownloadCTA';
+import FAQ from '../components/landing/FAQ';
 import Footer from '../components/layout/Footer';
 import ReferralPopup from '../components/layout/ReferralPopup';
 import ProtectedRoute from '../components/ProtectedRoute';
@@ -42,6 +43,7 @@ const LandingPage = () => {
                 <Pricing />
                 <UserFeedback />
                 <DownloadCTA />
+                <FAQ />
             </main>
             <Footer />
         </div>
