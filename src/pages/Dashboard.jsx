@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import API_URL from '../config/api';
+import { BACKEND_URL, FRONTEND_URL } from '../config/api';
 // Reusable component for statistic cards
 const StatCard = ({ icon, label, value, colorClass }) => (
     <div className="bg-white dark:bg-gray-800/50 p-5 rounded-none border border-gray-200 dark:border-gray-700/50 shadow-lg dark:shadow-none">
@@ -79,7 +79,7 @@ const Dashboard = ({ handleQuickAction }) => {
             try {
                 // Call backend to generate token
                 const response = await axios.post(
-                    `${API_URL}/api/desktop/generate-token`,
+                    `${BACKEND_URL}/api/desktop/generate-token`,
                     {
                         type: coinUsageType,
                         duration: minutes * 60
@@ -110,7 +110,7 @@ const Dashboard = ({ handleQuickAction }) => {
     const verifyUser = async () => {
         try {
             const response = await axios.post(
-                `${API_URL}/api/desktop/get-token-info`,
+                `${BACKEND_URL}/api/desktop/get-token-info`,
                 { token: generatedToken },
                 {
                     withCredentials: true, // 👈 if you’re handling cookies in backend

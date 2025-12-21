@@ -3,8 +3,7 @@ import { User, Shield, CreditCard, Bell, Save, Upload, Lock, LogOut, ExternalLin
 import { useAuth } from '../contexts/AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import API_URL from '../config/api';
-
+import { BACKEND_URL, FRONTEND_URL } from '../config/api';
 // Reusable component for TOP TAB navigation items
 const TabNavItem = ({ icon, label, isActive, onClick }) => (
     <button
@@ -128,7 +127,7 @@ const ProfileSettings = () => {
             formData.append('profilePicture', file);
 
             const response = await axios.post(
-                `${API_URL}/api/users/upload-profile-picture`,
+                `${BACKEND_URL}/api/users/upload-profile-picture`,
                 formData,
                 {
                     withCredentials: true,
@@ -171,7 +170,7 @@ const ProfileSettings = () => {
         setSaving(true);
         try {
             const response = await axios.put(
-                `${API_URL}/api/users/update-profile`,
+                `${BACKEND_URL}/api/users/update-profile`,
                 { name: name.trim(), username: username.trim() },
                 {
                     withCredentials: true,
@@ -322,7 +321,7 @@ const SecuritySettings = () => {
         setUpdating(true);
         try {
             const response = await axios.put(
-                `${API_URL}/api/users/change-password`,
+                `${BACKEND_URL}/api/users/change-password`,
                 {
                     currentPassword: hasPassword ? passwords.currentPassword : null,
                     newPassword: passwords.newPassword
@@ -449,7 +448,7 @@ const SecuritySettings = () => {
                     onClick={async () => {
                         try {
                             const response = await axios.put(
-                                `${API_URL}/api/users/toggle-extra-security`,
+                                `${BACKEND_URL}/api/users/toggle-extra-security`,
                                 {},
                                 {
                                     withCredentials: true,
@@ -550,7 +549,7 @@ const NotificationSettings = () => {
 
         try {
             const response = await axios.put(
-                `${API_URL}/api/users/update-notifications`,
+                `${BACKEND_URL}/api/users/update-notifications`,
                 { notifications: newNotifications },
                 {
                     withCredentials: true,

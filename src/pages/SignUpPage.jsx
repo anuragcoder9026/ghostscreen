@@ -1,11 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Eye, EyeOff, Mail, KeyRound, User, Loader } from 'lucide-react';
+import { Mail, Lock, User, EyeOff } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from "react-toastify";
-import API_URL from '../config/api';
-
+import { BACKEND_URL, FRONTEND_URL } from '../config/api';
 const GoogleIcon = () => (
     <svg className="w-5 h-5" viewBox="0 0 48 48">
         <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12s5.373-12,12-12
@@ -23,7 +22,7 @@ const GoogleIcon = () => (
 const SignUpPage = () => {
     const { login } = useAuth();
     const navigate = useNavigate();
-    const [searchParams] = useSearchParams();
+    const location = useLocation();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -33,8 +32,9 @@ const SignUpPage = () => {
     });
 
     useEffect(() => {
-        const errorMsg = searchParams.get("error");
-        const referCode = searchParams.get("refer_code");
+        const params = new URLSearchParams(location.search);
+        const errorMsg = params.get("error");
+        const referCode = params.get("refer_code");
 
         if (errorMsg) {
             toast.error(errorMsg);
@@ -42,7 +42,7 @@ const SignUpPage = () => {
         if (referCode) {
             setFormData(prev => ({ ...prev, referralCode: referCode }));
         }
-    }, [searchParams]);
+    }, [location]);
 
     const [showOtp, setShowOtp] = useState(false);
     const [otp, setOtp] = useState("");
@@ -61,7 +61,7 @@ const SignUpPage = () => {
         setLoading(true);
         try {
             await axios.post(
-                `${API_URL}/api/users/sign-up-user`,
+                `${BACKEND_URL}/api/users/sign-up-user`,
                 formData,
                 {
                     withCredentials: true,
@@ -120,7 +120,7 @@ const SignUpPage = () => {
                 return toast.error("OTP must be 6 digits");
             }
             const response = await axios.post(
-                `${API_URL}/api/users/verify-otp`,
+                `${BACKEND_URL}/api/users/verify-otp`,
                 {
                     email: formData?.email,
                     otp: otp,
@@ -143,7 +143,7 @@ const SignUpPage = () => {
     const resendOTP = async () => {
         try {
             await axios.post(
-                `${API_URL}/api/users/resend-otp`,
+                `${BACKEND_URL}/api/users/resend-otp`,
                 { email: formData?.email },
                 {
                     withCredentials: true,
@@ -158,7 +158,7 @@ const SignUpPage = () => {
 
     const handleGoogleSignUp = () => {
         const referralCode = formData.referralCode;
-        window.location.href = `${API_URL}/api/auth/google/signup?referralCode=${referralCode}`;
+        window.location.href = `${BACKEND_URL}/api/auth/google/signup?referralCode=${referralCode}`;
     };
 
     return (

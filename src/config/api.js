@@ -1,6 +1,5 @@
-// API Configuration
-// In production (Vercel), use VITE_API_URL from environment variables
-// In development, default to localhost
-const API_URL = 'https://ghostscreen-backend.onrender.com';
+// API Configuration for Vite
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+export const FRONTEND_URL = import.meta.env.VITE_FRONTEND_URL;
 
-export default API_URL;
+export default { BACKEND_URL, FRONTEND_URL };

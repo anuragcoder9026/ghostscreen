@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from "react-toastify";
-import API_URL from '../config/api';
+import { BACKEND_URL, FRONTEND_URL } from '../config/api';
 // A simple component for the Google Icon SVG
 const GoogleIcon = () => (
     <svg className="w-5 h-5" viewBox="0 0 48 48">
@@ -48,7 +48,7 @@ const SignInPage = () => {
         setLoading(true);
         try {
             const response = await axios.post(
-                `${API_URL}/api/users/sign-in-user`,
+                `${BACKEND_URL}/api/users/sign-in-user`,
                 formData,
                 {
                     withCredentials: true, // 👈 if you’re handling cookies in backend
@@ -70,7 +70,7 @@ const SignInPage = () => {
     };
 
     const handleGoogleSignIn = () => {
-        window.location.href = `${API_URL}/api/auth/google/signin`;
+        window.location.href = `${BACKEND_URL}/api/auth/google/signin`;
     };
 
     const handleSendOTP = async (e) => {
@@ -78,7 +78,7 @@ const SignInPage = () => {
         setForgotLoading(true);
         try {
             await axios.post(
-                `${API_URL}/api/users/forgot-password`,
+                `${BACKEND_URL}/api/users/forgot-password`,
                 { email: forgotEmail },
                 {
                     withCredentials: true,
@@ -112,7 +112,7 @@ const SignInPage = () => {
         setForgotLoading(true);
         try {
             await axios.post(
-                `${API_URL}/api/users/reset-password`,
+                `${BACKEND_URL}/api/users/reset-password`,
                 { email: forgotEmail, otp: forgotOTP, newPassword },
                 {
                     withCredentials: true,

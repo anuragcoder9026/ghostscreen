@@ -13,8 +13,8 @@ const ReferralPopup = () => {
   const { user } = useAuth();
 
   const invitationLink = user?.referralCode
-    ? `http://localhost:5173/signup?refer_code=${user.referralCode}`
-    : "http://localhost:5173/signup";
+    ? `${process.env.FRONTEND_URL}/signup?refer_code=${user.referralCode}`
+    : `${process.env.FRONTEND_URL}/signup`;
 
   const handleCopy = (text, setStateFn) => {
     navigator.clipboard.writeText(text);
