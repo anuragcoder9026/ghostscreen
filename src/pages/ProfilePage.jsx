@@ -10,7 +10,7 @@ import SupportPage from './SupportPage';
 import ReferralsPage from './ReferralsPage';
 
 const ProfilePage = () => {
-    const { userToken, timeCoins, logout, user } = useAuth();
+    const { userToken, timeCoins, logout, user, loading } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -65,6 +65,18 @@ const ProfilePage = () => {
             default: return null;
         }
     };
+
+    // Show loading spinner while user is being fetched
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center transition-colors duration-300">
+                <div className="text-center">
+                    <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                    <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg">Loading your profile...</p>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col transition-colors duration-300">
