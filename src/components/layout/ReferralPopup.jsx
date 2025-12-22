@@ -22,7 +22,7 @@ const ReferralPopup = () => {
     setTimeout(() => setStateFn(false), 1500);
   };
 
-  const shareText = "Join me on GhostScreen and get 50 coins! Use my link:";
+  const shareText = "Join me on Oview and get 20 coins! Use my link:";
   const encodedUrl = encodeURIComponent(invitationLink);
   const encodedText = encodeURIComponent(shareText);
 
@@ -30,7 +30,7 @@ const ReferralPopup = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Join GhostScreen',
+          title: 'Join Oview',
           text: shareText,
           url: invitationLink,
         });

@@ -11,7 +11,7 @@ const Features = () => {
         { icon: <ToggleRight size={28} />, title: "Multi-Model Intelligence", description: "Powered by Gemini 3,Gpt-OSS-120b and LLama-3.3 capable of understanding complex code, logic puzzles, and long-context documents.", highlight: ["Gemini 3", "Gpt-OSS-120b", "LLama-3.3"] },
         { icon: <KeyRound size={28} />, title: "Ghost Mode", description: "A fully transparent, click-through overlay that lets you read AI answers while continuing to type in your code editor underneath.", highlight: ["transparent", "overlay"] },
         { icon: <Clock size={28} />, title: "Vision Auto-Fix", description: "Advanced OCR technology that reads code directly from your screen, even if it's an image or video, with high accuracy.", highlight: ["OCR", "high accuracy"] },
-        { icon: <Feather size={28} />, title: "Low Resource Usage", description: "GhostScreen runs silently and efficiently in the background, ensuring no impact on your system's performance.", highlight: ["silently", "efficiently"] },
+        { icon: <Feather size={28} />, title: "Low Resource Usage", description: "Oview runs silently and efficiently in the background, ensuring no impact on your system's performance.", highlight: ["silently", "efficiently"] },
     ];
 
     const handlePlayClick = () => {
@@ -26,7 +26,7 @@ const Features = () => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Privacy Features You'll Actually Use</h2>
-                    <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">GhostScreen is designed with powerful, intuitive tools to give you full control over your on-screen privacy.</p>
+                    <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">Oview is designed with powerful, intuitive tools to give you full control over your on-screen privacy.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {featuresData.map((feature, index) => (<FeatureCard key={index} {...feature} />))}
@@ -36,7 +36,7 @@ const Features = () => {
             {/* --- Video Tutorial Section --- */}
             <div className="mt-14 p-2 md:p-5">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">See GhostScreen in Action</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">See Oview in Action</h2>
                     <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">Watch this short tutorial to see how easy it is to protect your privacy during screen shares.</p>
                 </div>
                 <div className="relative w-full max-w-5xl mx-auto">
@@ -63,7 +63,7 @@ const Features = () => {
                                 <div className="relative group cursor-pointer w-full h-full" onClick={handlePlayClick}>
                                     <img
                                         src={`https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg`}
-                                        alt="GhostScreen Video Tutorial"
+                                        alt="Oview Video Tutorial"
                                         className="w-full h-full object-cover"
                                         onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/1280x720/0A0A1A/E0E0E0?text=Video+Thumbnail'; }}
                                     />

@@ -41,7 +41,7 @@ const LandingPage = () => {
                 <Features />
                 <HowItWorks />
                 <Pricing />
-                <UserFeedback />
+                {/* <UserFeedback /> */}
                 <DownloadCTA />
                 <FAQ />
             </main>

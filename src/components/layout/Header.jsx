@@ -34,7 +34,7 @@ const Header = () => {
                 <button onClick={() => navigate('/')} className="text-xl lg:text-2xl font-bold tracking-wider flex items-center gap-2 text-gray-900 dark:text-white transition-colors duration-300">
                     {/* <EyeOff className="text-blue-600 dark:text-blue-400" size={28} /> */}
                     <img src={logo} alt="Logo" className="w-20 h-10" />
-                    <span className='hidden lg:flex'>GhostScreen</span>
+                    <span className='hidden lg:flex'>Oview</span>
                 </button>
                 <nav className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (

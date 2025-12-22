@@ -178,7 +178,7 @@ const SignUpPage = () => {
                         <div className="text-center mb-8">
                             <button onClick={() => navigate('/')} className="text-3xl font-bold tracking-wider flex items-center justify-center gap-2 mx-auto text-gray-900 dark:text-white transition-colors">
                                 <EyeOff className="text-blue-600 dark:text-blue-400" size={32} />
-                                <span>GhostScreen</span>
+                                <span>Oview</span>
                             </button>
                             <p className="text-gray-600 dark:text-gray-400 mt-2 transition-colors">Create an account to get your unique token.</p>
                         </div>

@@ -43,23 +43,23 @@ const FAQ = () => {
     const faqs = [
         {
             question: "How do I use my login token?",
-            answer: "Simply copy the unique token from your account dashboard and paste it into the login field of the GhostScreen desktop application. No password required!"
+            answer: "Simply copy the unique token from your account dashboard and paste it into the login field of the Oview desktop application. No password required!"
         },
         {
             question: "What happens when my Time Coins run out?",
             answer: "When your Time Coin balance reaches zero, the stealth mode will be disabled. You can easily purchase more coins from your account dashboard at any time to continue using the service."
         },
         {
-            question: "Is GhostScreen compatible with macOS or Linux?",
-            answer: "Currently, GhostScreen is only available for Windows. We are actively working on developing versions for both macOS and Linux. Stay tuned for updates!"
+            question: "Is Oview compatible with macOS or Linux?",
+            answer: "Currently, Oview is only available for Windows. We are actively working on developing versions for both macOS and Linux. Stay tuned for updates!"
         },
         {
             question: "Can I use one account on multiple computers?",
-            answer: "Yes, you can use your single GhostScreen account and token on multiple Windows computers. Your Time Coin balance will be synced across all your devices."
+            answer: "Yes, you can use your single Oview account and token on multiple Windows computers. Your Time Coin balance will be synced across all your devices."
         },
         {
             question: "How does the Time Coin system work?",
-            answer: "The system is pay-as-you-go. 1 Time Coin equals 1 hour of active stealth mode. Coins are only consumed when you have GhostScreen enabled, giving you full control over your usage."
+            answer: "The system is pay-as-you-go. 1 Time Coin equals 1 hour of active stealth mode. Coins are only consumed when you have Oview enabled, giving you full control over your usage."
         },
         {
             question: "Can I get a refund for my unused Time Coins?",
@@ -79,7 +79,7 @@ const FAQ = () => {
                         Frequently Asked Questions
                     </h2>
                     <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
-                        Find answers to common questions about GhostScreen
+                        Find answers to common questions about Oview
                     </p>
                 </div>
 

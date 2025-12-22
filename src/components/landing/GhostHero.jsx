@@ -104,7 +104,7 @@ const GhostHero = () => {
                         <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-sm text-center lg:text-left">
                             Generate Token, Download, Invisible.
                             <br />
-                            GhostScreen is your Invisible screen on which you can independently run any website like Chatgpt, gemini, which help you in interviewes.
+                            Oview is your Invisible screen on which you can independently run any website like Chatgpt, gemini, which help you in interviewes.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xs mx-auto lg:mx-0">
                             <a

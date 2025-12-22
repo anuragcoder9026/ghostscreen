@@ -141,7 +141,7 @@ const Dashboard = ({ handleQuickAction }) => {
             {/* --- Header --- */}
             <div>
                 <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Welcome Back, {user?.name}!</h1>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">Here's a summary of your GhostScreen account.</p>
+                <p className="text-gray-600 dark:text-gray-400 mt-1">Here's a summary of your Oview account.</p>
             </div>
 
             {/* --- Main Grid --- */}
@@ -151,7 +151,7 @@ const Dashboard = ({ handleQuickAction }) => {
                     {/* Token Card */}
                     <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-6 rounded-none border border-blue-500/30 shadow-lg relative overflow-hidden">
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Your Desktop App Token</h3>
-                        <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 max-w-md">Use this One Time token to log in to the GhostScreen desktop application. Keep it safe!</p>
+                        <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 max-w-md">Use this One Time token to log in to the Oview desktop application. Keep it safe!</p>
 
                         <div className="flex items-center gap-4">
                             <div className={`flex items-center gap-2 bg-white/60 dark:bg-black/30 p-3 rounded-lg flex-grow transition-all duration-300 overflow-hidden ${!showToken ? 'blur-sm select-none' : ''}`}>
@@ -274,7 +274,7 @@ const Dashboard = ({ handleQuickAction }) => {
                     </div>
 
                     {/* Usage Chart */}
-                    <div className="bg-white dark:bg-gray-800/50 p-6 rounded-none border border-gray-200 dark:border-gray-700/50 shadow-lg dark:shadow-none">
+                    {/* <div className="bg-white dark:bg-gray-800/50 p-6 rounded-none border border-gray-200 dark:border-gray-700/50 shadow-lg dark:shadow-none">
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2"><BarChart2 size={20} /> Weekly Stealth Usage</h3>
                         <div style={{ width: '100%', height: 250 }}>
                             <ResponsiveContainer>
@@ -286,10 +286,10 @@ const Dashboard = ({ handleQuickAction }) => {
                                 </BarChart>
                             </ResponsiveContainer>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* NEW: Recent Activity */}
-                    <div className="bg-white dark:bg-gray-800/50 p-6 rounded-none border border-gray-200 dark:border-gray-700/50 shadow-lg dark:shadow-none">
+                    {/* <div className="bg-white dark:bg-gray-800/50 p-6 rounded-none border border-gray-200 dark:border-gray-700/50 shadow-lg dark:shadow-none">
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Activity</h3>
                         <div className="space-y-4">
                             {activityData.map((activity, index) => (
@@ -302,7 +302,8 @@ const Dashboard = ({ handleQuickAction }) => {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
+
                 </div>
 
                 {/* Right Column */}

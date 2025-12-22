@@ -32,7 +32,7 @@ const BlogPage = () => {
                             <BookOpen className="text-blue-600 dark:text-blue-400" size={32} />
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-                            GhostScreen Blog
+                            Oview Blog
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-gray-400">
                             Tips, tutorials, and insights on screen privacy, remote work, and productivity

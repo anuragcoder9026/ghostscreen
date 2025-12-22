@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 const HowItWorks = () => {
     const steps = [
         { number: 1, title: 'Create Your Account', description: 'Sign up on our website to generate your personal, unique login token.' },
-        { number: 2, title: 'Download The App', description: 'Get the GhostScreen desktop client for Windows. A lightweight and quick installation.' },
+        { number: 2, title: 'Download The App', description: 'Get the Oview desktop client for Windows. A lightweight and quick installation.' },
         { number: 3, title: 'Login with Token', description: 'Launch the app and paste your token to log in. Your privacy shield is now ready!' },
     ];
     return (

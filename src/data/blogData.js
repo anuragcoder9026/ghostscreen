@@ -1,23 +1,23 @@
-// Sample blog posts data for GhostScreen
+// Sample blog posts data for Oview
 export const blogPosts = [
     {
         id: 1,
         slug: "master-screen-privacy-remote-interviews",
         title: "Master Screen Privacy During Remote Technical Interviews",
         excerpt: "Learn how to maintain professional privacy while sharing your screen during coding interviews and technical assessments.",
-        content: `Remote technical interviews have become the norm, but they often require sharing your entire screen. This can expose **personal information**, **private messages**, and other **sensitive data**. GhostScreen offers a solution that lets you maintain your privacy without compromising the interview experience.
+        content: `Remote technical interviews have become the norm, but they often require sharing your entire screen. This can expose **personal information**, **private messages**, and other **sensitive data**. Oview offers a solution that lets you maintain your privacy without compromising the interview experience.
 
 ## Why Screen Privacy Matters
 
 When you're in a technical interview, you need to focus on **solving problems**, not worrying about what's visible on your screen. Personal notifications, private messages, or sensitive information can be **distracting** and potentially **embarrassing**.
 
-## How GhostScreen Helps
+## How Oview Helps
 
-GhostScreen's **selective hiding feature** lets you choose which applications to hide during screen sharing. With just a hotkey, you can instantly toggle visibility of selected apps, keeping your screen **professional** while maintaining access to your notes and resources.
+Oview's **selective hiding feature** lets you choose which applications to hide during screen sharing. With just a hotkey, you can instantly toggle visibility of selected apps, keeping your screen **professional** while maintaining access to your notes and resources.
 
 ## Best Practices
 
-1. **Test Before the Interview**: Always test GhostScreen with your interview platform beforehand
+1. **Test Before the Interview**: Always test Oview with your interview platform beforehand
 2. **Know Your Hotkey**: Practice using the toggle hotkey so it becomes second nature
 3. **Prepare Your Workspace**: Set up your hidden apps before the interview starts
 4. **Keep Reference Materials Ready**: Have documentation and notes in hidden windows for quick access
@@ -29,7 +29,7 @@ GhostScreen's **selective hiding feature** lets you choose which applications to
 - **Zero Performance Impact**: Ultra-low latency ensures smooth operation
 - **Professional Appearance**: Maintain a clean, distraction-free screen
 
-GhostScreen gives you the **confidence** to focus on what matters - showcasing your skills and solving problems.`,
+Oview gives you the **confidence** to focus on what matters - showcasing your skills and solving problems.`,
         author: "Anurag Patel",
         date: "2024-12-15",
         category: "Tips & Tricks",
@@ -40,13 +40,13 @@ GhostScreen gives you the **confidence** to focus on what matters - showcasing y
     {
         id: 2,
         slug: "complete-guide-time-coin-system",
-        title: "Understanding GhostScreen's Time Coin System",
+        title: "Understanding Oview's Time Coin System",
         excerpt: "A comprehensive guide to how our pay-as-you-go Time Coin system works and how to maximize your usage.",
-        content: `GhostScreen uses a unique Time Coin system that gives you complete control over your usage and costs. Unlike traditional subscriptions, you only pay for what you use.
+        content: `Oview uses a unique Time Coin system that gives you complete control over your usage and costs. Unlike traditional subscriptions, you only pay for what you use.
 
 ## How Time Coins Work
 
-One Time Coin equals one minute of active stealth mode. Coins are only consumed when GhostScreen's hiding feature is actively enabled, giving you precise control over your spending.
+One Time Coin equals one minute of active stealth mode. Coins are only consumed when Oview's hiding feature is actively enabled, giving you precise control over your spending.
 
 ## Purchasing Time Coins
 
@@ -76,10 +76,10 @@ The Time Coin system ensures you're always in control of your privacy budget.`,
     },
     {
         id: 3,
-        slug: "ghostscreen-vs-competitors-comparison",
-        title: "GhostScreen vs Screen Sharing Alternatives: A Detailed Comparison",
-        excerpt: "See how GhostScreen stacks up against other screen privacy solutions in the market.",
-        content: `When it comes to screen privacy during remote work and interviews, you have several options. Let's compare GhostScreen with other popular solutions.
+        slug: "oview-vs-competitors-comparison",
+        title: "Oview vs Screen Sharing Alternatives: A Detailed Comparison",
+        excerpt: "See how Oview stacks up against other screen privacy solutions in the market.",
+        content: `When it comes to screen privacy during remote work and interviews, you have several options. Let's compare Oview with other popular solutions.
 
 ## Traditional Virtual Desktops
 
@@ -95,9 +95,9 @@ Some people try to manually minimize and restore windows:
 - Breaks your workflow
 - Can miss notifications or pop-ups
 
-## GhostScreen's Advantage
+## Oview's Advantage
 
-GhostScreen offers unique benefits:
+Oview offers unique benefits:
 - **Instant Toggle**: Hide/show apps with a single hotkey
 - **Universal Compatibility**: Works with Zoom, Teams, Google Meet, Discord, and more
 - **Selective Hiding**: Choose exactly which apps to hide
@@ -106,11 +106,11 @@ GhostScreen offers unique benefits:
 
 ## Performance Comparison
 
-GhostScreen is engineered for speed with minimal resource usage. Our 200ms latency ensures smooth, seamless transitions that won't disrupt your presentations or interviews.
+Oview is engineered for speed with minimal resource usage. Our 200ms latency ensures smooth, seamless transitions that won't disrupt your presentations or interviews.
 
 ## The Verdict
 
-If you need reliable, fast, and affordable screen privacy that works everywhere, GhostScreen is the clear choice.`,
+If you need reliable, fast, and affordable screen privacy that works everywhere, Oview is the clear choice.`,
         author: "Anurag Patel",
         date: "2024-12-05",
         category: "Comparisons",
@@ -120,10 +120,10 @@ If you need reliable, fast, and affordable screen privacy that works everywhere,
     },
     {
         id: 4,
-        slug: "setting-up-ghostscreen-first-time",
-        title: "Getting Started with GhostScreen: A Step-by-Step Tutorial",
-        excerpt: "New to GhostScreen? This comprehensive guide will help you set up and start using GhostScreen in minutes.",
-        content: `Welcome to GhostScreen! This guide will walk you through everything you need to know to get started with protecting your screen privacy.
+        slug: "setting-up-oview-first-time",
+        title: "Getting Started with Oview: A Step-by-Step Tutorial",
+        excerpt: "New to Oview? This comprehensive guide will help you set up and start using Oview in minutes.",
+        content: `Welcome to Oview! This guide will walk you through everything you need to know to get started with protecting your screen privacy.
 
 ## Installation
 
@@ -133,15 +133,15 @@ If you need reliable, fast, and affordable screen privacy that works everywhere,
 
 ## First-Time Setup
 
-Once installed, GhostScreen will guide you through:
+Once installed, Oview will guide you through:
 - Setting your custom hotkey (default: Ctrl+Shift+H)
 - Selecting which applications to hide by default
 - Testing the hide/show toggle
 
 ## Configuring Your Apps
 
-You can customize which applications GhostScreen hides:
-1. Open GhostScreen settings
+You can customize which applications Oview hides:
+1. Open Oview settings
 2. Click "Add Application"
 3. Select apps from the list or browse for executables
 4. Save your preferences
@@ -156,13 +156,13 @@ Before your first real use:
 
 ## Your First Session
 
-When you're ready to use GhostScreen:
+When you're ready to use Oview:
 1. Start your screen sharing session
 2. Activate stealth mode from the system tray
 3. Use your hotkey to toggle app visibility as needed
 4. Coins are consumed only while stealth mode is active
 
-That's it! You're now ready to enjoy private, professional screen sharing with GhostScreen.`,
+That's it! You're now ready to enjoy private, professional screen sharing with Oview.`,
         author: "Anurag Patel",
         date: "2024-11-28",
         category: "Getting Started",
@@ -179,7 +179,7 @@ That's it! You're now ready to enjoy private, professional screen sharing with G
 
 ## 1. Use Screen Privacy Tools
 
-Tools like GhostScreen help you control what's visible during screen shares, preventing accidental exposure of personal information.
+Tools like Oview help you control what's visible during screen shares, preventing accidental exposure of personal information.
 
 ## 2. Set Up a Dedicated Workspace
 
@@ -250,9 +250,9 @@ Advanced filtering could allow you to share specific regions of your screen whil
 
 Decentralized verification systems could ensure that screen sharing sessions are secure and participants are authenticated.
 
-## GhostScreen's Vision
+## Oview's Vision
 
-At GhostScreen, we're pioneering privacy-first screen sharing with:
+At Oview, we're pioneering privacy-first screen sharing with:
 - Instant selective hiding
 - Universal platform compatibility
 - User-controlled privacy settings
@@ -270,7 +270,7 @@ We're working on exciting features including:
 
 As remote work becomes permanent for many, privacy-first screen sharing isn't just a luxury - it's a necessity. The future belongs to solutions that put users in control of their digital privacy.
 
-Join us in building this future with GhostScreen.`,
+Join us in building this future with Oview.`,
         author: "Anurag Patel",
         date: "2024-11-15",
         category: "Industry Insights",

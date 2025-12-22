@@ -56,7 +56,7 @@ const ReferralsPage = ({ embedded = false }) => {
                     Earn More Coins on referring friends <br />
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
-                    Invite friends to GhostScreen and earn coins.
+                    Invite friends to Oview and earn coins.
                 </p>
                 <p className="text-red-600 dark:text-red-400 text-sm bg-red-100 dark:bg-red-900/20 border border-red-200 dark:border-red-900/50 p-3 rounded-lg inline-block">
                     Both Referrer and Referred users must use a valid college email or you must have a paid plan to earn coins on referrals.
@@ -133,7 +133,7 @@ const ReferralsPage = ({ embedded = false }) => {
                     <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 flex items-center justify-center mx-auto font-bold text-xl border border-gray-200 dark:border-gray-700 shadow-lg dark:shadow-blue-900/20">
                         3
                     </div>
-                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Earn free Pro</h3>
+                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Earn free Coins</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                         You'll automatically receive another 50 coins for each valid referral.
                     </p>
@@ -145,14 +145,14 @@ const ReferralsPage = ({ embedded = false }) => {
                 <h3 className="font-semibold text-xl text-gray-900 dark:text-white pl-1">Your referrals</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-white dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700/50 rounded-none p-8 hover:border-blue-500/30 transition-colors shadow-sm dark:shadow-none">
-                        <div className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">0</div>
+                        <div className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">{user?.referralCount}</div>
                         <div className="text-xs text-blue-600 dark:text-blue-400 uppercase tracking-widest font-semibold">Referrals</div>
                     </div>
                     <div className="bg-white dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700/50 rounded-none p-8 hover:border-blue-500/30 transition-colors shadow-sm dark:shadow-none">
                         <div className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
-                            0
+                            {user?.referralCount * 50}
                         </div>
-                        <div className="text-xs text-blue-600 dark:text-blue-400 uppercase tracking-widest font-semibold">Coins earned</div>
+                        <div className="text-xs text-blue-600 dark:text-blue-400 uppercase tracking-widest font-semibold">Coins earned by referrals</div>
                     </div>
                 </div>
             </div>

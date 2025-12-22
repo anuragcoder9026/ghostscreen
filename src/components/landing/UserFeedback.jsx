@@ -3,7 +3,7 @@ import React from 'react';
 const UserFeedback = () => {
     const feedbackData = [
         { quote: "This is a game-changer for working from home. I can keep my personal chats open without worrying about them showing up on a shared screen. Genius!", name: "Daniel K.", title: "Remote Developer", avatar: "https://placehold.co/64x64/8B5CF6/FFFFFF?text=DK" },
-        { quote: "Finally, a way to handle sensitive client data during presentations without having to close everything. GhostScreen works flawlessly and is super easy to use.", name: "Maria S.", title: "Financial Advisor", avatar: "https://placehold.co/64x64/10B981/FFFFFF?text=MS" },
+        { quote: "Finally, a way to handle sensitive client data during presentations without having to close everything. Oview works flawlessly and is super easy to use.", name: "Maria S.", title: "Financial Advisor", avatar: "https://placehold.co/64x64/10B981/FFFFFF?text=MS" },
         { quote: "As a student, this helps me keep my research notes visible only to me during online classes. The Time Coin system is perfect, I just buy what I need.", name: "Chen L.", title: "University Student", avatar: "https://placehold.co/64x64/F59E0B/FFFFFF?text=CL" },
         { quote: "I was skeptical at first, but it works exactly as advertised. It's lightweight and doesn't slow down my PC at all. Highly recommend for privacy-conscious professionals.", name: "Alex P.", title: "Project Manager", avatar: "https://placehold.co/64x64/3B82F6/FFFFFF?text=AP" },
         { quote: "The token login is so much better than another password. I got set up in less than a minute. The app is simple, focused, and does its one job perfectly.", name: "Sophie B.", title: "UX Designer", avatar: "https://placehold.co/64x64/EC4899/FFFFFF?text=SB" },

@@ -29,7 +29,7 @@ const Footer = () => {
                     <div className="md:col-span-2 lg:col-span-2">
                         <div className="flex items-center gap-2 mb-4">
                             <EyeOff className="text-blue-600 dark:text-blue-400" size={28} />
-                            <span className="text-2xl font-bold tracking-wider text-gray-900 dark:text-white">GhostScreen</span>
+                            <span className="text-2xl font-bold tracking-wider text-gray-900 dark:text-white">Oview</span>
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 max-w-sm mb-6">
                             Stay private in plain sight. Get the latest updates and feature releases straight to your inbox.
@@ -80,7 +80,7 @@ const Footer = () => {
                 {/* Bottom Section: Copyright & Socials */}
                 <div className="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-6">
                     <div className="flex items-center gap-4">
-                        <p>&copy; {new Date().getFullYear()} GhostScreen.</p>
+                        <p>&copy; {new Date().getFullYear()} Oview.</p>
                         {/* Live Clock */}
                         <div className="hidden sm:flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
