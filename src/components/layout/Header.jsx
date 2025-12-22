@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useTheme } from '../../contexts/ThemeContext';
 import { FaWindows } from "react-icons/fa";
-
+import logo from "../../assets/logo.png";
+import { GITHUB_URL } from '../../config/api';
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const navigate = useNavigate();
@@ -31,7 +32,8 @@ const Header = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-blue-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-transparent transition-colors duration-300">
             <div className="mx-auto px-6 py-3 flex justify-between items-center">
                 <button onClick={() => navigate('/')} className="text-xl lg:text-2xl font-bold tracking-wider flex items-center gap-2 text-gray-900 dark:text-white transition-colors duration-300">
-                    <EyeOff className="text-blue-600 dark:text-blue-400" size={28} />
+                    {/* <EyeOff className="text-blue-600 dark:text-blue-400" size={28} /> */}
+                    <img src={logo} alt="Logo" className="w-20 h-10" />
                     <span className='hidden lg:flex'>GhostScreen</span>
                 </button>
                 <nav className="hidden md:flex items-center space-x-8">
@@ -51,10 +53,14 @@ const Header = () => {
                     </button>
                     {isLoggedIn ? (
                         <>
-                            <button className="cursor-pointer flex gap-2 justify-content items-center h-[36px] lg:h-[40px] bg-green-500 text-black font-bold hover:bg-green-400 transition-colors px-4 lg:px-5 text-sm lg:text-base">
+                            <a
+                                href={GITHUB_URL}
+                                download
+                                className="cursor-pointer flex gap-2 justify-content items-center h-[36px] lg:h-[40px] bg-green-500 text-black font-bold hover:bg-green-400 transition-colors px-4 lg:px-5 text-sm lg:text-base"
+                            >
                                 <FaWindows size={18} className="lg:w-5 lg:h-5" />
                                 Download
-                            </button>
+                            </a>
                             <button onClick={logout} className="p-2 px-3 bg-blue-600 text-gray-100 hover:text-white rounded-none text-sm lg:text-base">Log Out</button>
                             <button onClick={() => navigate('/profile')} className="rounded-full w-10 h-10 bg-gray-200 dark:bg-gray-700 flex items-center justify-center ring-2 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 ring-transparent hover:ring-blue-500 transition-all">
                                 <img
@@ -66,10 +72,14 @@ const Header = () => {
                         </>
                     ) : (
                         <>
-                            <button className="cursor-pointer flex gap-2 justify-content items-center h-[36px] lg:h-[40px] bg-green-500 text-black font-bold hover:bg-green-400 transition-colors px-4 lg:px-5 text-sm lg:text-base">
+                            <a
+                                href={GITHUB_URL}
+                                download
+                                className="cursor-pointer flex gap-2 justify-content items-center h-[36px] lg:h-[40px] bg-green-500 text-black font-bold hover:bg-green-400 transition-colors px-4 lg:px-5 text-sm lg:text-base"
+                            >
                                 <FaWindows size={18} className="lg:w-5 lg:h-5" />
                                 Download
-                            </button>
+                            </a>
                             <button onClick={() => navigate('/signin')} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 lg:px-5 py-2 cursor-pointer transition-all duration-300 shadow-lg shadow-blue-600/20 rounded-none text-sm lg:text-base">Sign In</button>
                         </>
                     )}

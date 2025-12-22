@@ -1,5 +1,5 @@
 // API Configuration for Vite
 export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 export const FRONTEND_URL = import.meta.env.VITE_FRONTEND_URL;
-
-export default { BACKEND_URL, FRONTEND_URL };
+export const GITHUB_URL = import.meta.env.VITE_GITHUB_URL;
+export default { BACKEND_URL, FRONTEND_URL, GITHUB_URL };

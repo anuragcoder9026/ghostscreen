@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { FaWindows } from "react-icons/fa";
 import { useTheme } from '../../contexts/ThemeContext';
-
+import { GITHUB_URL } from '../../config/api';
 const GhostHero = () => {
     const canvasRef = useRef(null);
     const { theme } = useTheme();
@@ -107,10 +107,14 @@ const GhostHero = () => {
                             GhostScreen is your Invisible screen on which you can independently run any website like Chatgpt, gemini, which help you in interviewes.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xs mx-auto lg:mx-0">
-                            <button className="cursor-pointer flex gap-2 justify-content items-center h-[60px] bg-green-500 hover:bg-green-600 dark:hover:bg-green-400 text-white dark:text-black font-bold rounded-md transition-colors px-10 shadow-lg dark:shadow-green-900/20">
+                            <a
+                                href={GITHUB_URL}
+                                download
+                                className="cursor-pointer flex gap-2 justify-content items-center h-[60px] bg-green-500 hover:bg-green-600 dark:hover:bg-green-400 text-white dark:text-black font-bold rounded-md transition-colors px-10 shadow-lg dark:shadow-green-900/20"
+                            >
                                 <FaWindows size={25} />
                                 Download
-                            </button>
+                            </a>
 
                         </div>
                         <a href="#" className="text-sm text-gray-500 dark:text-gray-400 mt-4 hover:text-gray-900 dark:hover:text-white hover:underline transition-colors">All Downloads ›</a>

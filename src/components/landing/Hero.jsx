@@ -10,7 +10,7 @@ const Hero = () => {
         <section id="home" className="pt-32 pb-20 text-center overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 mb-12">
                 <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tighter text-gray-900 dark:text-white">Stay Private and Invisible with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">GhostScreen</span></h1>
-                <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8">Make your desktop screen completely invisible during screen shares on Zoom, Teams, and more. Perfect for private work, confidential data, or avoiding distractions.</p>
+                <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8">Make your desktop screen completely invisible on Zoom, Teams, Meet and more. Perfect for private work, confidential data, or avoiding distractions.</p>
                 <div className="flex justify-center items-center">
                     <div className="relative">
                         <button onClick={() => navigate('/signup')}
